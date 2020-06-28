@@ -8,7 +8,7 @@
 	<groupId>lof</groupId>
 	<artifactId>persistence-specification</artifactId>
 	<version>1.0.0</version>
-	<!-- <packaging>jar</packaging> -->
+	<packaging>jar</packaging>
 
 	<name>persistence-specification</name>
 	<description>Persistence Specification example</description>
@@ -23,19 +23,16 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>6.0.13.Final</version>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
-			<version>2.3.0.RELEASE</version>
+			<version>2.3.1.RELEASE</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.persistence</groupId>
 			<artifactId>javax.persistence-api</artifactId>
 			<version>2.2</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 	<build>

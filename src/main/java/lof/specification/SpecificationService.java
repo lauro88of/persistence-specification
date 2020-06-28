@@ -16,7 +16,7 @@ import lof.specification.Utils.SpecificationHelper;
  * 2 de jun de 2020 
  * @param <T>
  */
-public abstract class SpecificationService<T> {
+public abstract class SpecificationService<T> implements SpecificationGenericService<T> {
 
 	private final Log logger = LogFactory.getLog(SpecificationService.class);
 	
@@ -24,6 +24,7 @@ public abstract class SpecificationService<T> {
 		super();
 	}
 	
+	@Override
 	public List<T> findBySpecification(String search) {
 	    List<SearchCriteria> listaCriteria = searchForSearchCriteriaList(search);
 	    logger.debug("findBySpecification : Params: String search");
@@ -35,6 +36,7 @@ public abstract class SpecificationService<T> {
 		return SpecificationHelper.stringForSearchCriteria(search);
 	}
 
+	@Override
 	public List<T> findBySpecification(List<SearchCriteria> specs) {
 		SpecificationsBuilder<T> builder = new SpecificationsBuilder<>();
 		for(SearchCriteria spec : specs) {
@@ -45,12 +47,14 @@ public abstract class SpecificationService<T> {
 	    return getJpaSpecificationExecutor().findAll(Specification.where(builder.build()));
 	}
 
+	@Override
 	public List<T> findBySpecification(Specification< T> spec) {
 		logger.debug("findBySpecification : Params: Specification< T> spec");
 		logger.debug(spec);
 		return getJpaSpecificationExecutor().findAll(Specification.where(spec));
 	}
 
+	@Override
 	public Optional<T> findOneBySpecification(Specification< T> spec) {
 		logger.debug("findOneBySpecification");
 		logger.debug(spec);
