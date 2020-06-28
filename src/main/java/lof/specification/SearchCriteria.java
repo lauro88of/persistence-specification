@@ -1,4 +1,4 @@
-package pxt.sgi.specification;
+package lof.specification;
 
 import java.io.Serializable;
 

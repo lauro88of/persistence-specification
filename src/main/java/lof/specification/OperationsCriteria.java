@@ -1,7 +1,7 @@
-package pxt.sgi.specification;
+package lof.specification;
 
 /**
- * Classe para armazenar constants de operações de pesquisa de banco
+ * Class for BD search operations constants
  * @author matheusm
  * 16/10/2019
  *
@@ -9,7 +9,7 @@ package pxt.sgi.specification;
 public class OperationsCriteria {
 
 	private OperationsCriteria() {
-		throw new IllegalStateException("Utility class");
+		super();
 	}
 	/**
 	 * Equals operator

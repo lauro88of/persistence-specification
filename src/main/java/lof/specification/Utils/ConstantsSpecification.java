@@ -1,4 +1,4 @@
-package pxt.sgi.specification;
+package lof.specification.Utils;
 
 /**
  * @author Lauro Oliveira Freitas
@@ -8,11 +8,11 @@ package pxt.sgi.specification;
 public class ConstantsSpecification {
 
 	private ConstantsSpecification() {
-		throw new IllegalStateException("Utility class");
+		super();
 	}
 	
 	/**
-	 * Indicador do início de um elemento de tempo em um valor de data/hora, conforme descrito na ISO 8601
+	 * Indicator of the start of a time element at a date / time value, as described in ISO 8601
 	 * Ex: 2019-10-16T11:00:00
 	 */
 	public static final String TIME_DELIMITER = "T";
