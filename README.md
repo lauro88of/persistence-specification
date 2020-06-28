@@ -43,12 +43,12 @@ public class ProductServiceImpl extends SpecificationService<Product> implements
 	}
 	
 	
-	public Product findOneExemplo() {
+	public Product findOneExample() {
 		SpecificationsBuilder<Product> builder = new SpecificationsBuilder<>();
 		builder.with("code", OperationsCriteria.EQ, 2020L);
 		return findOneBySpecification(builder.build()).orElse(null);
 	}
-	public List<Product> findListExemplo() {
+	public List<Product> findListExample() {
 		SpecificationsBuilder<Product> builder = new SpecificationsBuilder<>();
 		builder.with("category.name", OperationsCriteria.IN, new String[] {"Mobile", "Clouthes"});
 		return findBySpecification(builder.build());
