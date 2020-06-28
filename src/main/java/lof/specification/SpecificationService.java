@@ -1,4 +1,4 @@
-package pxt.sgi.specification;
+package lof.specification;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,6 +7,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+
+import lof.specification.Utils.SpecificationHelper;
 
 /**
  * @author Lauro Oliveira Freitas

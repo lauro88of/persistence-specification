@@ -1,4 +1,4 @@
-package pxt.sgi.specification;
+package lof.specification.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,11 @@ import java.util.List;
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
 
+import lof.specification.OperationsCriteria;
+import lof.specification.SearchCriteria;
+
 /**
- * Classe Objeto responsável pela recuperação do Path.
+ * Class Object responsible for Path.
  * 
  * @author lauroof
  *
@@ -17,7 +20,7 @@ import javax.persistence.criteria.Root;
 public class SpecificationHelper<D, T> {
 
 	/**
-	 * Método que recupega o path recursivamente.
+	 * Method get for recursive path.
 	 * 
 	 * @param root
 	 * @param key
@@ -25,9 +28,9 @@ public class SpecificationHelper<D, T> {
 	 */
 	public Path<D> get(Root<T> root, String key) {
 		String[] keys = null;
-		// Path de retorno para atribuição dos atributos recursivos
+		// Return path for assigning recursive attributes
 		Path<D> path = null;
-		// Path temporário para atribuição dos atributos recursivos
+		// Temporary path for assigning recursive attributes
 		Path<Object> pathAux = null;
 		if (key.contains(".")) {
 			keys = key.split("[.]");

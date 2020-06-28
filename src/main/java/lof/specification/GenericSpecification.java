@@ -1,4 +1,4 @@
-package pxt.sgi.specification;
+package lof.specification;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -12,6 +12,9 @@ import javax.persistence.criteria.Root;
 
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+
+import lof.specification.Utils.ConstantsSpecification;
+import lof.specification.Utils.SpecificationHelper;
 
 /**
  * @author Lauro Oliveira Freitas
